@@ -5,8 +5,52 @@
     <meta name="format-detection" content="telephone=no, email=no, address=no" />
     <meta charset="UTF-8" />
     <title>gh-pages sample</title>
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="/assets/js/script.js"></script>
   </head>
   <body>
-    <p>Hello, World!</p>
+    <div id="page-container">
+      <main id="page-main">
+        <div class="content-inner">
+          <div class="formArea mod-AuthForm">
+            <div class="mod-FormPanel">
+              <h1 class="pageName">お問い合わせ</h1>
+              <form id="form-contact" action="./" method="post">
+                <dl class="formFields">
+                  <div class="di mod-FieldDi">
+                    <dt class="labelBlock">
+                      <label for="field-name">お名前</label>
+                    </dt>
+                    <dd class="fieldBlock">
+                      <p><input id="field-name" type="text" name="name"></p>
+                    </dd>
+                  </div>
+                  <div class="di mod-FieldDi">
+                    <dt class="labelBlock">
+                      <label for="field-subject">件名</label>
+                    </dt>
+                    <dd class="fieldBlock">
+                      <p><input id="field-subject" type="text" name="subject"></p>
+                    </dd>
+                  </div>
+                  <div class="di mod-FieldDi">
+                    <dt class="labelBlock">
+                      <label for="field-body">本文</label>
+                    </dt>
+                    <dd class="fieldBlock">
+                      <p><textarea id="field-body" name="body" cols="80" rows="10"></textarea></p>
+                    </dd>
+                  </div>
+                </dl>
+                <ul class="formButtons">
+                  <li id="form-contact-submit"><button type="submit">送信する</button></li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

@@ -1,0 +1,181 @@
+:root {
+  --fontVerdana: Verdana, sans-serif;
+  --innerWidth: 1080px;
+  --primaryColor: #064aad;
+  --primaryLightColor: #5080c5;
+  --secondaryColor: #fbbd58;
+  --mod-FormPanel-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1), 0 -2px 4px -2px rgb(0 0 0 / .1), -2px 0 4px -2px rgb(0 0 0 / .1);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  overflow: auto;
+  min-width: 300px;
+  background: #fffff9;
+  line-height: 1.5;
+  font-family: var(--fontVerdana);
+  font-size: 1.6rem;
+  overflow-wrap: anywhere;
+}
+
+table {
+  overflow-wrap: break-word;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+button {
+  padding: 3px 6px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: #eee;
+  color: inherit;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+button.plain {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  vertical-align: top;
+}
+
+:is(input[type=text], input[type=password], input[type=date], input[type=datetime-local], input[type=time], input[type=email], textarea) {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4px 8px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: #fff;
+  font-family: var(--fontVerdana);
+  font-size: 1.6rem;
+  opacity: 1;
+}
+:is(input[type=text], input[type=password], input[type=date], input[type=datetime-local], input[type=time], input[type=email], textarea):read-only {
+  background: #eee;
+  color: #666;
+}
+:is(input[type=text], input[type=password], input[type=date], input[type=datetime-local], input[type=time], input[type=email], textarea):disabled {
+  background: #eee;
+  color: #666;
+}
+:is(input[type=text], input[type=password], input[type=date], input[type=datetime-local], input[type=time], input[type=email], textarea):invalid {
+  background: #fee;
+}
+:is(input[type=text], input[type=password], input[type=date], input[type=datetime-local], input[type=time], input[type=email], textarea)::placeholder {
+  color: #aaa;
+}
+
+:is(input[type=checkbox], input[type=radio]) {
+  margin: 3px 0 0;
+}
+label:has(:is(input[type=checkbox], input[type=radio])) {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.wbr {
+  display: inline-block;
+}
+
+.content-inner {
+  max-width: var(--innerWidth);
+  margin-inline: auto;
+  padding-inline: 10px;
+}
+
+.mod-AuthForm .pageName {
+  text-align: center;
+  font-family: var(--fontNotoSerifJP);
+  font-size: 3rem;
+}
+.mod-AuthForm .formFields .di {
+  margin-top: 20px;
+}
+.mod-AuthForm .formFields .labelBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.mod-AuthForm .formFields .fieldBlock {
+  margin-top: 4px;
+}
+.mod-AuthForm .formFields .fieldBlock :is(input[type=text], input[type=password], input[type=date], input[type=datetime-local], input[type=time], input[type=email]) {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.mod-AuthForm .formFields .fieldBlock :is(input[type=text], input[type=password], input[type=date], input[type=datetime-local], input[type=time], input[type=email]):focus {
+  border-color: transparent;
+  outline: 2px solid var(--primaryLightColor);
+}
+.mod-AuthForm .formFields .fieldBlock .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.mod-AuthForm .formButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+.mod-AuthForm .formButtons:has(#form-contact-submit p) {
+  justify-content: flex-start;
+}
+.mod-AuthForm .formButtons li {
+  line-height: 1;
+}
+.mod-AuthForm .formButtons li a {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.2rem;
+}
+.mod-AuthForm .formButtons li a:hover {
+  text-decoration: none;
+}
+.mod-AuthForm .formButtons li button {
+  padding: 10px 14px;
+  background: var(--primaryColor);
+  color: #fff;
+}
+.mod-AuthForm .formButtons li button:hover {
+  opacity: 0.9;
+}
+.mod-AuthForm .formButtons li button:disabled {
+  background: #ccc;
+  color: #666;
+  opacity: 0.5;
+}
+
+.mod-FormPanel {
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: var(--mod-FormPanel-shadow);
+}
