@@ -17,14 +17,14 @@
             <div class="mod-FormPanel">
               <h1 class="pageName">お問い合わせ</h1>
               <form id="form-contact" action="./" method="post">
-                <button type="submit" disabled="" style="display: none">Prevent-Submit-by-Enter-key</button>
+                <button type="submit" disabled style="display: none">Prevent-Submit-by-Enter-key</button>
                 <dl class="formFields">
                   <div class="di mod-FieldDi">
                     <dt class="labelBlock">
                       <label for="field-name">お名前</label>
                     </dt>
                     <dd class="fieldBlock">
-                      <p><input id="field-name" type="text" name="name"></p>
+                      <p><input id="field-name" type="text" name="name" required></p>
                     </dd>
                   </div>
                   <div class="di mod-FieldDi">
@@ -32,7 +32,7 @@
                       <label for="field-subject">件名</label>
                     </dt>
                     <dd class="fieldBlock">
-                      <p><input id="field-subject" type="text" name="subject"></p>
+                      <p><input id="field-subject" type="text" name="subject" required></p>
                     </dd>
                   </div>
                   <div class="di mod-FieldDi">
@@ -40,7 +40,7 @@
                       <label for="field-body">本文</label>
                     </dt>
                     <dd class="fieldBlock">
-                      <p><textarea id="field-body" name="body" cols="80" rows="10"></textarea></p>
+                      <p><textarea id="field-body" name="body" cols="80" rows="10" required></textarea></p>
                     </dd>
                   </div>
                 </dl>
